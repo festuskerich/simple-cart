@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="CodeHim">
+    <title>Home</title>
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+	<!-- Demo CSS (No need to include it into your project) -->
+	<link rel="stylesheet" href="css/demo.css">
+  
+  </head>
+  <body>   
+ <main>
+     <!-- Start DEMO HTML (Use the following code into your project)-->
+   <div class="container">
+    <header class="header">
+      <h3 class="header-logo">Trusted Store</h3>
+      
+      <nav class="header-nav">
+        <ul>
+          <li><a href="payment.html">Home</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <div class="products"> 
+    </div><!-- products -->
+
+    <div class="form-popup" id="myForm">
+      <form class="form-container">
+        <h1>Contact Details</h1>
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" id="email" name="email" required>
+    
+        <label for="psw"><b>Phone</b></label>
+        <input type="text" placeholder="Enter Phone" id="phone" name="phone" required>
+    
+        <button type="submit" class="btn cart-next">Next</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Back</button>
+      </form>
+    </div>
+    
+    <div class="shopping-cart">
+      <div class="shopping-cart-head">
+        <span class="product-quantity">0</span> Product(s) in Cart
+      </div>
+      <ul class="shopping-cart-list">
+      </ul>
+      <div class="cart-buttons">
+        <a href="#0" class="button empty-cart-btn">Empty</a>
+        <a href="#0" class="button cart-checkout">Checkout - <span class="total-price">$0</span></a>
+      </div>
+    </div>
+  </div><!-- container -->   
+     <!-- END EDMO HTML (Happy Coding!)-->
+ </main>
+ 
+      
+ <footer class="credit">Trusted Store: <a title="Awesome web design code & scripts" href="https://www.codehim.com?source=demo-page" target="_blank">y</a></footer>
+  
+      <!-- Script Js -->
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+      <script src="./js/script.js"></script>
+      <script>
+        function openForm() {
+          document.getElementById("myForm").style.display = "block";
+        }
+        
+        function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+          productsInCart = [];
+        }
+        </script>
+      
+  </body>
+</html>

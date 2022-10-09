@@ -1,0 +1,220 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  background: cornsilk;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  background: steelblue;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  overflow: hidden;
+  height: 65px;
+}
+
+.header a {
+  color: inherit;
+}
+
+.header a:hover {
+  font-weight: bold;
+}
+
+.header-logo {
+  float: left;
+}
+
+.header-nav {
+  float: right;
+}
+
+.header-nav ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 310px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background: azure;
+}
+
+
+.product span {
+  font-weight: bold;
+}
+
+.product-image img {
+  display: block;
+  max-width: 228px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.row .product:last-child {
+  margin-right: 0;
+}
+
+.product-add-to-cart {
+  overflow: hidden;
+  clear: both;
+  margin-top: 10px;
+}
+
+.see-more {
+  float: left;
+  background: indianred;
+}
+
+.add-to-cart {
+  float: right;
+}
+
+.shopping-cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  min-heigh: 300px;
+  margin-right: 20px;
+  margin-top: 10px;
+  padding: 20px;
+  background: wheat;
+}
+
+.shopping-cart-head {
+  background: steelblue;
+  color: white;
+  padding: 5px;
+}
+
+.shopping-cart,
+.shopping-cart-head {
+  border-radius: 5px;
+}
+
+.empty-cart-btn,
+.cart-checkout {
+  display: none;
+
+}
+
+.empty-cart-btn {
+  margin-bottom: 5px;
+}
+
+.cart-checkout {
+  background: limegreen;
+}
+.cart-next {
+  background: limegreen;
+}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text],
+.form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus,
+.form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
+}
