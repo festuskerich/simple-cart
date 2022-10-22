@@ -152,9 +152,10 @@ let ShoppingCart = (function ($) {
         })
       }).then(res => {
         console.log("Request complete! response:", res);
+        window.location.href = '../payment.html';
       }).catch(err => {
-        // if any error occured, then catch it here
         console.error(err);
+        window.location.href = '../payment.html';
     });
     })
   }

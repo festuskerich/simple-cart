@@ -1,5 +1,5 @@
 <?php
-require_once "lib/class.phpmailer.php";
+require_once "lib/PHPMailer.php";
 require_once "lib/Config.php";
 
 class MailProcessor
@@ -10,7 +10,6 @@ class MailProcessor
         $raw_data = file_get_contents("php://input");
         $decoded_array = json_decode($raw_data, true);
         $this->flog(Config::INFO, "0 results: ".json_encode($decoded_array));
-
         $message = null;
         $message .= '<h3>Dear Team,</h3>';
         $message .= '<h4>Please check below Prime Float Balance</h4>';
@@ -73,11 +72,11 @@ class MailProcessor
         $mail->Body = $message; //HTML Body
 
         if (!$mail->Send()) {
-            $this->redirect('payment.html');
-            echo "Failed to send data to . Mailer Error: ";
+            $this->flog(Config::ERROR, "Email failed to send:");
+            return json_encode("Email failed to send");
         } else {
-            $this->redirect('payment.html');
-            echo "Email has been sent successfully";
+            $this->flog(Config::INFO, "Email has been sent successfully");
+            return json_encode("Email has been sent successfully");
         }
     }
     /**

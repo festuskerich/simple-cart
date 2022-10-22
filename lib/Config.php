@@ -14,7 +14,7 @@ class Config
     const MAIL_USERNAME = "no-reply@mika.com";
     const MAIL_PASSWORD = "VS2nnkTzugwsAJch";
     const RECIPIENTS = array(
-        'festus.kerich@cellulant.io' => 'Kimtai Kerich',
+        'festuskerich@gmail.com' => 'Kimtai Kerich',
     );
 
 
